@@ -1,16 +1,29 @@
-## Hi there 👋
+# Hi there 👋,
 
-<!--
-**danvsv/danvsv** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm a **DevOps Engineer** with 25+ years of experience in IT, focusing on:
 
-Here are some ideas to get you started:
+- 🐳 **Docker & Docker Compose** – advanced usage, managing 600+ Ubuntu servers
+- ☸️ **Kubernetes** – currently learning and building production-ready clusters
+- 🖥️ **Linux Administration** – expert in automation and system optimization
+- ⚡ **Cloud & Infrastructure** – managing large-scale deployments and monitoring
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+### 🔧 Tech & Tools I Use Daily
+`Docker` • `Kubernetes` • `Linux` • `Ansible` • `Python (asyncio)` • `Nginx` • `Redis` • `Prometheus` • `Grafana` • `GitHub Actions`
+
+---
+
+### 📚 Currently Learning
+- Advanced **Kubernetes** (deployment patterns, scaling, security)
+
+---
+
+### 📬 Let's Connect
+- [LinkedIn](https://www.linkedin.com/in/danverman)
+- [Email](mailto:dan.verman@gmail.com)
+
+---
+
+💡 _I use GitHub mainly for learning, personal projects, and open-source contributions._
+Even though most of my professional work is in private repositories, I plan to share some useful scripts and tools here soon.
