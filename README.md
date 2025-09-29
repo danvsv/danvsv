@@ -10,7 +10,7 @@ I'm a **DevOps Engineer** with 25+ years of experience in IT, focusing on:
 ---
 
 ### 🔧 Tech & Tools I Use Daily
-`Docker` • `Kubernetes` • `Linux` • `Ansible` • `Python (asyncio)` • `Nginx` • `Redis` • `Prometheus` • `Grafana` • `GitHub Actions`
+`Docker` • `Kubernetes` • `Linux` • `Ansible` • `Python` • `Nginx` • `Redis` • `Prometheus` • `Grafana` • `GitHub Actions`
 
 ---
 
