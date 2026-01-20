@@ -2,9 +2,8 @@
 
 I'm a **DevOps Engineer** with 25+ years of experience in IT, focusing on:
 
-- **Docker & Docker Compose** – advanced usage, managing 600+ Ubuntu servers
-- **Kubernetes** – building production-ready clusters
 - **Linux Administration** – automation and system optimization
+- **Docker & Docker Compose** – advanced usage, managing 700+ Ubuntu servers
 - **Cloud & Infrastructure** – large-scale deployments and monitoring
 - **Cybersecurity** – threat mitigation, hardening, secure access management
 - **Backup & Disaster Recovery** – automated multi-region strategies
@@ -22,15 +21,15 @@ I'm a **DevOps Engineer** with 25+ years of experience in IT, focusing on:
 
 ## Tech & Tools
 
-Docker · Kubernetes · Linux · Ansible · Python · Nginx · Redis · Prometheus · Grafana · GitHub Actions · n8n · Ollama
+Docker · Linux · Ansible · Python · Nginx · Redis · Prometheus · Grafana · GitHub Actions · n8n · Ollama
 
 ---
 
 ## Currently Learning
 
+- AI/ML Ops (model serving, RAG pipelines, vector databases)
 - Advanced Kubernetes (deployment patterns, scaling, security)
 - Cloud-native Security (Zero Trust, container hardening, secrets management)
-- AI/ML Ops (model serving, RAG pipelines, vector databases)
 
 ---
 
