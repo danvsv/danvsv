@@ -12,7 +12,7 @@ I'm a **DevOps Engineer** with 25+ years of experience in IT, focusing on:
 
 ## Automation & AI
 
-- **Workflow Automation** – designing complex workflows with n8n for business process automation
+- **Workflow Automation** – designing complex workflows with n8n/python for business process automation
 - **Local LLM** – self-hosted language models (Ollama, LM Studio) for privacy-first solutions
 - **AI Infrastructure** – maintaining servers with GPU acceleration for inference workloads
 - **MCP Integration** – Model Context Protocol for AI agent capabilities
