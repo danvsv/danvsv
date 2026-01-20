@@ -2,32 +2,44 @@
 
 I'm a **DevOps Engineer** with 25+ years of experience in IT, focusing on:
 
-- 🐳 **Docker & Docker Compose** – advanced usage, managing 600+ Ubuntu servers  
-- ☸️ **Kubernetes** – currently building production-ready clusters  
-- 🖥️ **Linux Administration** – expert in automation and system optimization  
-- ⚡ **Cloud & Infrastructure** – managing large-scale deployments and monitoring  
-- 🛡️ **Cybersecurity** – proactive threat mitigation, hardening, and secure access management  
-- ☁️ **Cloud Backup & Disaster Recovery** – automated multi-region backup and restore strategies  
+- **Docker & Docker Compose** – advanced usage, managing 600+ Ubuntu servers
+- **Kubernetes** – building production-ready clusters
+- **Linux Administration** – automation and system optimization
+- **Cloud & Infrastructure** – large-scale deployments and monitoring
+- **Cybersecurity** – threat mitigation, hardening, secure access management
+- **Backup & Disaster Recovery** – automated multi-region strategies
 
 ---
 
-### 🧰 Tech & Tools I Use Daily
-`Docker` · `Kubernetes` · `Linux` · `Ansible` · `Python` · `Nginx` · `Redis` · `Prometheus` · `Grafana` · `GitHub Actions` · `Security` · `Backup`
+## Automation & AI
+
+- **Workflow Automation** – designing complex workflows with n8n for business process automation
+- **Local LLM** – self-hosted language models (Ollama, LM Studio) for privacy-first solutions
+- **AI Infrastructure** – maintaining servers with GPU acceleration for inference workloads
+- **MCP Integration** – Model Context Protocol for AI agent capabilities
 
 ---
 
-### 📚 Currently Learning
-- Advanced **Kubernetes** (deployment patterns, scaling, security)
-- **Cloud-native Security** (Zero Trust, container hardening, secrets management)
+## Tech & Tools
+
+Docker · Kubernetes · Linux · Ansible · Python · Nginx · Redis · Prometheus · Grafana · GitHub Actions · n8n · Ollama
 
 ---
 
-### 🌐 Let's Connect
-- [LinkedIn](https://www.linkedin.com/in/danverman)
+## Currently Learning
+
+- Advanced Kubernetes (deployment patterns, scaling, security)
+- Cloud-native Security (Zero Trust, container hardening, secrets management)
+- AI/ML Ops (model serving, RAG pipelines, vector databases)
+
+---
+
+## Contact
+
+- [LinkedIn](https://linkedin.com)
 - [GitHub](https://github.com/danvsv)
-- [Email](mailto:dan.verman@email.com)
+- [Email](mailto:dan.verman@gmail.com)
 
 ---
 
-💡 *I use GitHub mainly for learning, personal projects, and open-source contributions.*  
-Even though most of my professional work is in private repositories, I plan to share some useful scripts and tools here soon.
+I use GitHub mainly for learning, personal projects, and open-source contributions. Most of my professional work is in private repositories, but I plan to share useful scripts and tools here soon.
