@@ -116,6 +116,12 @@
   }
   .dialog h2 { margin: 0 0 8px; }
   .dialog p { margin: 0 0 18px; color: var(--muted); }
+  .dlg-actions { display: flex; gap: 8px; }
+  .secondary {
+    font: inherit; font-size: 16px; background: var(--btn); color: var(--text); border: none;
+    border-radius: 12px; padding: 12px 20px; width: 100%; cursor: pointer;
+  }
+  [hidden] { display: none !important; }
   .primary {
     font: inherit; font-size: 16px; background: var(--accent); color: #fff; border: none;
     border-radius: 12px; padding: 12px 20px; width: 100%; cursor: pointer;
@@ -158,7 +164,10 @@
   <div class="dialog">
     <h2 id="dlgTitle"></h2>
     <p id="dlgText"></p>
-    <button class="primary" id="dlgBtn">Joc nou</button>
+    <div class="dlg-actions">
+      <button class="secondary" id="dlgCancel" hidden>Renunță</button>
+      <button class="primary" id="dlgBtn">Joc nou</button>
+    </div>
   </div>
 </div>
 
@@ -481,7 +490,12 @@ function render() {
 
 // ---------- Dialog ----------
 
-function showDialog(title, text) {
+let dialogAction = null;
+
+// Show a dialog; with onConfirm it acts as a confirmation (Cancel + action).
+function showDialog(title, text, onConfirm = null) {
+  dialogAction = onConfirm;
+  document.getElementById("dlgCancel").hidden = !onConfirm;
   document.getElementById("dlgTitle").textContent = title;
   document.getElementById("dlgText").textContent = text;
   document.getElementById("overlay").classList.add("show");
@@ -492,24 +506,31 @@ function hideDialog() { document.getElementById("overlay").classList.remove("sho
 
 buildBoard();
 
+function hasProgress() {
+  return state && !state.finished && state.values.some((v, i) => v && !state.given[i]);
+}
+
 document.getElementById("newGame").addEventListener("click", () => {
-  if (state && !state.finished && state.values.some((v, i) => v && !state.given[i]) &&
-      !confirm("Începi un joc nou? Progresul curent se pierde.")) return;
-  newGame(document.getElementById("difficulty").value);
+  const level = document.getElementById("difficulty").value;
+  if (hasProgress()) showDialog("Joc nou?", "Progresul curent se pierde.", () => newGame(level));
+  else newGame(level);
 });
 document.getElementById("difficulty").addEventListener("change", e => {
-  if (state && !state.finished && state.values.some((v, i) => v && !state.given[i]) &&
-      !confirm("Schimbi dificultatea și începi un joc nou?")) {
+  const level = e.target.value;
+  if (hasProgress()) {
     e.target.value = state.difficulty;
-    return;
-  }
-  newGame(e.target.value);
+    showDialog("Schimbi dificultatea?", "Începe un joc nou, iar progresul curent se pierde.", () => newGame(level));
+  } else newGame(level);
 });
 document.getElementById("undo").addEventListener("click", undo);
 document.getElementById("erase").addEventListener("click", erase);
 document.getElementById("hint").addEventListener("click", hint);
 document.getElementById("notes").addEventListener("click", () => { notesMode = !notesMode; render(); });
-document.getElementById("dlgBtn").addEventListener("click", () => newGame(document.getElementById("difficulty").value));
+document.getElementById("dlgBtn").addEventListener("click", () => {
+  if (dialogAction) dialogAction();
+  else newGame(document.getElementById("difficulty").value);
+});
+document.getElementById("dlgCancel").addEventListener("click", hideDialog);
 
 // Keyboard support (useful on desktop / tablets with keyboards).
 document.addEventListener("keydown", e => {
