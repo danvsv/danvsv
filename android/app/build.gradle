@@ -1,0 +1,49 @@
+plugins {
+    id "com.android.application"
+}
+
+android {
+    namespace "ro.danvsv.sudoku"
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "ro.danvsv.sudoku"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    sourceSets {
+        // Bundle the web game from ../../sudoku so there is a single source of truth.
+        main.assets.srcDirs = ["../../sudoku"]
+    }
+
+    signingConfigs {
+        // Committed debug-grade key so every build (any machine) can update installed copies.
+        // Fine for sideloading to a few devices; do not use for Play Store.
+        shared {
+            storeFile file("sudoku.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.shared
+        }
+    }
+
+    lint {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
