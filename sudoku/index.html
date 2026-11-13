@@ -134,9 +134,9 @@
     <h1>Sudoku</h1>
     <div style="display:flex; gap:8px;">
       <select id="difficulty" aria-label="Dificultate">
-        <option value="easy">Ușor</option>
+        <option value="beginner">Începător</option>
         <option value="medium">Mediu</option>
-        <option value="hard">Greu</option>
+        <option value="advanced">Avansat</option>
         <option value="expert">Expert</option>
       </select>
       <button class="icon-btn" id="newGame" aria-label="Joc nou">Nou</button>
@@ -176,7 +176,9 @@
 
 // ---------- Sudoku engine ----------
 
-const DIFFICULTY_CLUES = { easy: 40, medium: 32, hard: 27, expert: 23 };
+const DIFFICULTY_CLUES = { beginner: 40, medium: 32, advanced: 27, expert: 23 };
+// Map level keys from older saved games to the current ones.
+const LEGACY_LEVELS = { easy: "beginner", hard: "advanced" };
 const MAX_MISTAKES = 3;
 const STORAGE_KEY = "sudoku-state-v1";
 
@@ -290,7 +292,9 @@ function load() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return null;
     const s = JSON.parse(raw);
-    return s && Array.isArray(s.values) && s.values.length === 81 ? s : null;
+    if (!s || !Array.isArray(s.values) || s.values.length !== 81) return null;
+    s.difficulty = LEGACY_LEVELS[s.difficulty] || s.difficulty;
+    return s;
   } catch (e) { return null; }
 }
 
